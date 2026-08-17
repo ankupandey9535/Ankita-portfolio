@@ -17,7 +17,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResume }) => {
     <section className="relative min-h-screen h-screen w-full flex flex-col justify-between overflow-x-clip bg-[#0C0C0C]">
       {/* NAVBAR - EXACT SAME 5 EVENLY SPACED LINKS FOR ALL DEVICES */}
       <FadeIn delay={0} y={-20} className="w-full z-40">
-        <nav className="w-full flex items-center justify-between px-4 sm:px-6 md:px-10 pt-5 md:pt-8 text-[#D7E2EA] font-medium uppercase tracking-wider text-xs sm:text-base md:text-lg lg:text-[1.4rem]">
+        <nav className="w-full flex items-center justify-between px-3 sm:px-6 md:px-10 pt-4 sm:pt-6 md:pt-8 text-[#D7E2EA] font-medium uppercase tracking-wider text-[11px] xs:text-xs sm:text-base md:text-lg lg:text-[1.4rem]">
           <button onClick={() => scrollTo('about')} className="hover:opacity-70 transition-opacity duration-200">
             About
           </button>
@@ -36,17 +36,17 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResume }) => {
         </nav>
       </FadeIn>
 
-      {/* HERO HEADING - EXPLICITLY ANKITA */}
-      <div className="w-full overflow-hidden mt-6 sm:mt-4 md:-mt-5 z-20 px-2 sm:px-4">
+      {/* HERO HEADING - EXACT SAME GIANT IMPACT FONT FOR MOBILE AND DESKTOP */}
+      <div className="w-full overflow-hidden mt-4 sm:mt-2 md:-mt-5 z-20 px-1 sm:px-4">
         <FadeIn delay={0.15} y={40}>
-          <h1 className="hero-heading font-black uppercase tracking-tighter leading-none whitespace-nowrap w-full text-[10vw] sm:text-[11.2vw] md:text-[12.2vw] lg:text-[13vw] text-center select-none">
+          <h1 className="hero-heading font-black uppercase tracking-tighter leading-none whitespace-nowrap w-full text-[12.8vw] text-center select-none">
             Hi, i&apos;m ankita
           </h1>
         </FadeIn>
       </div>
 
       {/* HERO PORTRAIT - 3D FEMALE AVATAR FOR ANKITA */}
-      <div className="absolute left-1/2 -translate-x-1/2 z-10 w-[260px] sm:w-[360px] md:w-[440px] lg:w-[520px] top-1/2 -translate-y-1/2 sm:top-auto sm:translate-y-0 sm:bottom-0 pointer-events-auto">
+      <div className="absolute left-1/2 -translate-x-1/2 z-10 w-[270px] sm:w-[360px] md:w-[440px] lg:w-[520px] top-1/2 -translate-y-1/2 sm:top-auto sm:translate-y-0 sm:bottom-0 pointer-events-auto">
         <FadeIn delay={0.6} y={30}>
           <Magnet
             padding={150}
@@ -68,9 +68,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResume }) => {
       </div>
 
       {/* BOTTOM BAR - EXACT SAME LAYOUT FOR ALL DEVICES */}
-      <div className="w-full flex items-end justify-between px-4 sm:px-6 md:px-10 pb-7 sm:pb-8 md:pb-10 z-20">
+      <div className="w-full flex items-end justify-between px-3 sm:px-6 md:px-10 pb-5 sm:pb-8 md:pb-10 z-20">
         <FadeIn delay={0.35} y={20}>
-          <p className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug text-[clamp(0.7rem,1.4vw,1.5rem)] max-w-[140px] xs:max-w-[180px] sm:max-w-[220px] md:max-w-[260px]">
+          <p className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug text-[clamp(0.65rem,1.4vw,1.5rem)] max-w-[130px] xs:max-w-[170px] sm:max-w-[220px] md:max-w-[260px]">
             a content specialist driven by crafting striking and unforgettable web experiences
           </p>
         </FadeIn>
