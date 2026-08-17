@@ -48,7 +48,7 @@ export const MarqueeSection: React.FC = () => {
   const tripledRow2 = [...row2Images, ...row2Images, ...row2Images];
 
   return (
-    <section ref={sectionRef} className="bg-[#0C0C0C] pt-24 sm:pt-32 md:pt-40 pb-10 overflow-hidden">
+    <section ref={sectionRef} className="bg-[#0C0C0C] pt-16 sm:pt-32 md:pt-40 pb-10 overflow-hidden">
       <div className="flex flex-col gap-3">
         {/* ROW 1: MOVES RIGHT */}
         <div
@@ -64,7 +64,7 @@ export const MarqueeSection: React.FC = () => {
               src={imgUrl}
               alt="Project Showcase"
               loading="lazy"
-              className="w-[420px] h-[270px] rounded-2xl object-cover flex-shrink-0"
+              className="w-[280px] sm:w-[360px] md:w-[420px] h-[180px] sm:h-[230px] md:h-[270px] rounded-2xl object-cover flex-shrink-0"
             />
           ))}
         </div>
@@ -83,7 +83,7 @@ export const MarqueeSection: React.FC = () => {
               src={imgUrl}
               alt="Project Showcase"
               loading="lazy"
-              className="w-[420px] h-[270px] rounded-2xl object-cover flex-shrink-0"
+              className="w-[280px] sm:w-[360px] md:w-[420px] h-[180px] sm:h-[230px] md:h-[270px] rounded-2xl object-cover flex-shrink-0"
             />
           ))}
         </div>

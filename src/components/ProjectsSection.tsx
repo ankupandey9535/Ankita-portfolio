@@ -58,44 +58,46 @@ const ProjectCard: React.FC<CardProps> = ({ project, index, totalCards }) => {
   return (
     <div
       ref={containerRef}
-      className="sticky top-24 md:top-32 h-[85vh] flex items-center justify-center mb-12"
-      style={{ top: `calc(6rem + ${index * 28}px)` }}
+      className="sticky top-20 md:top-32 min-h-[75vh] md:h-[85vh] flex items-center justify-center mb-8 sm:mb-12"
+      style={{ top: `calc(5rem + ${index * 20}px)` }}
     >
       <motion.div
         style={{ scale }}
-        className="w-full h-full rounded-[40px] sm:rounded-[50px] md:rounded-[60px] border-2 border-[#D7E2EA] bg-[#0C0C0C] p-4 sm:p-6 md:p-8 flex flex-col justify-between shadow-2xl overflow-hidden"
+        className="w-full h-full rounded-[30px] sm:rounded-[50px] md:rounded-[60px] border-2 border-[#D7E2EA] bg-[#0C0C0C] p-4 sm:p-6 md:p-8 flex flex-col justify-between shadow-2xl overflow-hidden"
       >
         {/* TOP ROW */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4">
-          <div className="flex items-center gap-4">
-            <span className="font-black text-[#D7E2EA] text-[clamp(2.5rem,6vw,80px)] leading-none">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3">
+          <div className="flex items-center gap-3 sm:gap-4">
+            <span className="font-black text-[#D7E2EA] text-[clamp(2rem,5vw,80px)] leading-none">
               {project.num}
             </span>
             <div>
-              <span className="text-xs uppercase tracking-widest text-[#D7E2EA]/60 block font-light">
+              <span className="text-[10px] sm:text-xs uppercase tracking-widest text-[#D7E2EA]/60 block font-light">
                 {project.category}
               </span>
-              <h3 className="text-lg sm:text-2xl md:text-3xl font-medium uppercase text-[#D7E2EA]">
+              <h3 className="text-base sm:text-2xl md:text-3xl font-medium uppercase text-[#D7E2EA]">
                 {project.name}
               </h3>
             </div>
           </div>
 
-          <LiveProjectButton />
+          <div className="self-end sm:self-auto">
+            <LiveProjectButton />
+          </div>
         </div>
 
         {/* BOTTOM ROW: TWO COLUMN IMAGE GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-4 flex-grow items-stretch mt-2 overflow-hidden">
-          {/* LEFT COLUMN (40% width / 5 cols) - 2 STACKED IMAGES */}
-          <div className="md:col-span-5 flex flex-col gap-4">
-            <div className="h-[clamp(130px,16vw,230px)] rounded-[40px] sm:rounded-[50px] md:rounded-[60px] overflow-hidden border border-[#D7E2EA]/20">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-3 sm:gap-4 flex-grow items-stretch mt-2 overflow-hidden">
+          {/* LEFT COLUMN (40% width / 5 cols) */}
+          <div className="md:col-span-5 flex flex-col gap-3 sm:gap-4">
+            <div className="h-[120px] sm:h-[clamp(130px,16vw,230px)] rounded-[20px] sm:rounded-[40px] md:rounded-[60px] overflow-hidden border border-[#D7E2EA]/20">
               <img
                 src={project.col1Img1}
                 alt={`${project.name} preview 1`}
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
               />
             </div>
-            <div className="h-[clamp(160px,22vw,340px)] flex-grow rounded-[40px] sm:rounded-[50px] md:rounded-[60px] overflow-hidden border border-[#D7E2EA]/20">
+            <div className="hidden sm:block sm:h-[clamp(160px,22vw,340px)] flex-grow rounded-[20px] sm:rounded-[40px] md:rounded-[60px] overflow-hidden border border-[#D7E2EA]/20">
               <img
                 src={project.col1Img2}
                 alt={`${project.name} preview 2`}
@@ -104,8 +106,8 @@ const ProjectCard: React.FC<CardProps> = ({ project, index, totalCards }) => {
             </div>
           </div>
 
-          {/* RIGHT COLUMN (60% width / 7 cols) - 1 TALL IMAGE */}
-          <div className="md:col-span-7 h-full min-h-[260px] rounded-[40px] sm:rounded-[50px] md:rounded-[60px] overflow-hidden border border-[#D7E2EA]/20">
+          {/* RIGHT COLUMN (60% width / 7 cols) */}
+          <div className="md:col-span-7 h-[160px] sm:h-full min-h-[160px] sm:min-h-[260px] rounded-[20px] sm:rounded-[40px] md:rounded-[60px] overflow-hidden border border-[#D7E2EA]/20">
             <img
               src={project.col2Img}
               alt={`${project.name} main showcase`}
@@ -122,12 +124,12 @@ export const ProjectsSection: React.FC = () => {
   return (
     <section
       id="projects"
-      className="bg-[#0C0C0C] rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] -mt-10 sm:-mt-12 md:-mt-14 z-10 px-5 sm:px-8 md:px-10 pt-20 sm:pt-24 md:pt-32 pb-24 relative"
+      className="bg-[#0C0C0C] rounded-t-[30px] sm:rounded-t-[50px] md:rounded-t-[60px] -mt-8 sm:-mt-12 md:-mt-14 z-10 px-4 sm:px-8 md:px-10 pt-16 sm:pt-24 md:pt-32 pb-16 sm:pb-24 relative"
     >
       <div className="max-w-6xl mx-auto">
         {/* HEADING */}
-        <FadeIn delay={0} y={40} className="text-center mb-16 sm:mb-20 md:mb-28">
-          <h2 className="hero-heading font-black uppercase tracking-tight leading-none text-[clamp(3rem,12vw,160px)]">
+        <FadeIn delay={0} y={40} className="text-center mb-12 sm:mb-20 md:mb-28">
+          <h2 className="hero-heading font-black uppercase tracking-tight leading-none text-[clamp(2.5rem,10vw,160px)]">
             Project
           </h2>
         </FadeIn>
